@@ -12,9 +12,9 @@
   <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <img src="images/logo.png" alt="Rafting Site Logo" class="logo">
-    <nav>
+    <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="trips.html">Trips</a>
@@ -24,21 +24,22 @@
 
   <main>
     <div class="hero">
-      <img src="images/hero.jpg" alt="Rafting adventure">
-      <h1>Whitewater Rafting Adventures</h1>
-      <article>
-        <img src="images/client.jpg" alt="Happy client enjoying rafting">
-        <p>Our mission is to provide unforgettable rafting experiences with safety as our top priority.</p>
+      <img src="images/hero.jpg" alt="Exciting rafting adventure" class="hero-bg">
+      <h1 class="hero-title">Whitewater Rafting Adventures</h1>
+      <article class="mission-box">
+        <h3 class="mission-title">Our Mission</h3>
+        <img src="images/client.jpg" alt="Happy client after rafting trip" class="mission-img">
+        <p class="mission-text">To provide unforgettable rafting experiences with safety as our top priority.</p>
       </article>
     </div>
 
     <section class="history">
-      <h2>History</h2>
+      <h2 class="section-title">History</h2>
       <p>Founded in 2001, Whitewater Rafting Adventures began with a simple mission: to share the thrill of the river with people of all ages and experience levels. Over the years, we've grown into one of the top-rated rafting companies, known for safety, fun, and unforgettable adventures.</p>
     </section>
 
     <section class="adventure">
-      <h2>Adventure Awaits You</h2>
+      <h2 class="section-title">Adventure Awaits You</h2>
       <div class="gallery">
         <img src="images/river1.jpg" alt="Group rafting on Colorado River">
         <img src="images/river2.jpg" alt="Rafting through whitewater rapids">
@@ -49,12 +50,18 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2023 Whitewater Rafting Adventures | Namayanja Swabulah</p>
-    <nav class="sociallinks">
-      <a href="https://facebook.com"><img src="images/facebook.svg" alt="Visit us on Facebook"></a>
-      <a href="https://twitter.com"><img src="images/twitter.svg" alt="Follow us on Twitter"></a>
-      <a href="https://instagram.com"><img src="images/instagram.svg" alt="Follow us on Instagram"></a>
+  <footer class="site-footer">
+    <p class="copyright">&copy; 2023 Whitewater Rafting Adventures | Namayanja Swabulah</p>
+    <nav class="social-nav">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+        <img src="images/facebook.svg" alt="Visit us on Facebook" width="30">
+      </a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+        <img src="images/twitter.svg" alt="Follow us on Twitter" width="30">
+      </a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <img src="images/instagram.svg" alt="Follow us on Instagram" width="30">
+      </a>
     </nav>
   </footer>
 </body>
