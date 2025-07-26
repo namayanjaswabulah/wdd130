@@ -1,132 +1,172 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@700&display=swap');
-
-/* Color Variables */
+/* ===== YOUR COLOR PALETTE & FONTS ===== */
 :root {
-  --primary-color: #084c61;
-  --secondary-color: #d0e6f7;
-  --accent-color: #ff7f50;
-  --text-color: #333;
-  --background-color: #f9f9f9;
+    --primary-color: #493657;
+    /* English Violet */
+    --secondary-color: #b7c3f3;
+    /* Periwinkle */
+    --accent1-color: #e5e059;
+    /* Straw */
+    --accent2-color: #ffffff;
+    /* White */
 }
 
-/* Basic Reset */
+/* ===== BASE RESET ===== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* ===== YOUR FONT SETTINGS ===== */
 body {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--background-color);
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    background-color: var(--accent2-color);
+    color: #333;
 }
 
+h1,
+h2,
+h3 {
+    font-family: Georgia, serif;
+    color: var(--primary-color);
+}
+
+/* ===== HEADER STYLES ===== */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: var(--primary-color);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    margin-bottom: 10px;
 }
 
 .logo {
-  height: 80px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--primary-color);
+    padding: 15px 0;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 1rem;
-  font-weight: bold;
+    color: var(--accent2-color);
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* Hero Section */
+nav a:hover {
+    color: var(--accent1-color);
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--accent2-color);
+    border-radius: 5px;
+}
+
+/* ===== HERO SECTION (RUBRIC REQUIREMENT) ===== */
 .hero {
-  position: relative;
-  height: 400px;
-  overflow: hidden;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hero h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 3rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    background-color: rgba(73, 54, 87, 0.7);
+    /* Primary with opacity */
+    color: var(--accent1-color);
+    padding: 20px 0;
 }
 
 .hero article {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 300px;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
 }
 
 .hero article img {
-  float: right;
-  width: 100px;
-  margin-left: 1rem;
+    float: right;
+    width: 125px;
+    margin-left: 15px;
+    border: 2px solid var(--primary-color);
 }
 
-/* Sections */
-section {
-  padding: 2rem;
-  margin: 2rem 0;
-}
-
-.history {
-  background-color: var(--secondary-color);
-}
-
-.adventure h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
+/* ===== ADVENTURE GALLERY ===== */
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .gallery img {
-  width: 200px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 5px;
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid var(--secondary-color);
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
 footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: var(--primary-color);
-  color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 15px 20px;
+    margin-top: 40px;
+    color: var(--accent2-color);
 }
 
-.sociallinks a {
-  text-decoration: none;
-  margin: 0 0.5rem;
+.social-icons {
+    display: flex;
+    gap: 15px;
 }
 
-.sociallinks img {
-  width: 30px;
-  height: 30px;
+.social-icons a {
+    text-decoration: none;
+    /* Rubric requirement */
+}
+
+.social-icons img {
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
 }
