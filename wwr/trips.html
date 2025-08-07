@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore our white water rafting trips - from beginner to expert adventures. Book your thrilling rafting experience today!">
+    <meta name="author" content="Namayanja Swabulah">
+    <title>Rafting Trips | White Water Rafting Adventures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/rafting.css">
+    <style>
+        /* Additional styles specific to trips page */
+        .trips-hero {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .trips-hero img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .trips-hero h1 {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(90, 140, 90, 0.85);
+            color: white;
+            padding: 1.5rem;
+            font-family: Georgia, serif;
+            font-size: 2.2rem;
+            margin: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 3rem 2rem;
+            background-color: #5B8C5A;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .cta-section h2 {
+            font-family: Georgia, serif;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #FFC857;
+            color: #3A5A78;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid #FFC857;
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: #FFC857;
+            transform: translateY(-3px);
+        }
+
+        .trip-details {
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: Georgia, serif;
+            color: #3A5A78;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: #FFC857;
+            margin: 0.5rem auto;
+        }
+
+        .trip-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .trip-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .trip-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .trip-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .trip-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .trip-card:hover .trip-image img {
+            transform: scale(1.05);
+        }
+
+        .trip-content {
+            padding: 1.5rem;
+        }
+
+        .trip-content h3 {
+            color: #3A5A78;
+            margin-bottom: 0.5rem;
+        }
+
+        .trip-meta {
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem 0;
+            padding: 0.8rem 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .trip-meta div {
+            text-align: center;
+            flex: 1;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #5B8C5A;
+            margin: 1rem 0;
+        }
+
+        .book-button {
+            display: block;
+            background-color: #3A5A78;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-button:hover {
+            background-color: #2a4560;
+        }
+
+        .trips-table {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background-color: #3A5A78;
+            color: white;
+        }
+
+        th {
+            padding: 1rem;
+            text-align: left;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        td {
+            padding: 1rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .trip-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .trip-cards {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/wwr-logo.png" alt="White Water Rafting Company Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html" class="active">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="trips-hero">
+            <img src="images/trips-hero.jpg" alt="Rafting adventure on wild river">
+            <h1>Unforgettable Rafting Adventures</h1>
+        </div>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <h2>Ready for Your Next Adventure?</h2>
+            <p>Our expert guides are ready to take you on the rafting experience of a lifetime. Contact us today to book
+                your trip!</p>
+            <a href="contact.html" class="cta-button">Contact Us Now</a>
+        </section>
+
+        <!-- Detailed Trip Descriptions -->
+        <section class="trip-details">
+            <h2 class="section-title">Featured Adventures</h2>
+
+            <div class="trip-cards">
+                <!-- Trip 1 -->
+                <div class="trip-card">
+                    <div class="trip-image">
+                        <img src="images/trip1.jpg" alt="Wild Rapids Adventure">
+                    </div>
+                    <div class="trip-content">
+                        <h3>Wild Rapids Adventure</h3>
+                        <p>Experience the thrill of Class IV rapids on this adrenaline-pumping adventure. Perfect for
+                            thrill-seekers looking for an unforgettable challenge.</p>
+                        <div class="trip-meta">
+                            <div><strong>Duration:</strong> 2 Days</div>
+                            <div><strong>Difficulty:</strong> Class IV</div>
+                            <div><strong>Group Size:</strong> 6-8 People</div>
+                        </div>
+                        <div class="price">shs. 75,000 per person</div>
+                        <a href="contact.html" class="book-button">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Trip 2 -->
+                <div class="trip-card">
+                    <div class="trip-image">
+                        <img src="images/trip2.jpg" alt="Family Float Trip">
+                    </div>
+                    <div class="trip-content">
+                        <h3>Family Float Trip</h3>
+                        <p>Perfect for families with children, this gentle river float offers beautiful scenery and mild
+                            rapids. Great introduction to rafting for all ages.</p>
+                        <div class="trip-meta">
+                            <div><strong>Duration:</strong> 1 Day</div>
+                            <div><strong>Difficulty:</strong> Class I-II</div>
+                            <div><strong>Group Size:</strong> 4-10 People</div>
+                        </div>
+                        <div class="price">shs. 35,000 per person</div>
+                        <a href="contact.html" class="book-button">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Trip 3 -->
+                <div class="trip-card">
+                    <div class="trip-image">
+                        <img src="images/trip3.jpg" alt="Wilderness Expedition">
+                    </div>
+                    <div class="trip-content">
+                        <h3>Wilderness Expedition</h3>
+                        <p>Immerse yourself in nature on this 5-day expedition through pristine wilderness. Camp under
+                            the stars and tackle challenging rapids.</p>
+                        <div class="trip-meta">
+                            <div><strong>Duration:</strong> 5 Days</div>
+                            <div><strong>Difficulty:</strong> Class III-IV</div>
+                            <div><strong>Group Size:</strong> 4-6 People</div>
+                        </div>
+                        <div class="price">shs. 230,000 per person</div>
+                        <a href="contact.html" class="book-button">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trips Table -->
+            <h2 class="section-title">All Available Trips</h2>
+            <div class="trips-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Trip Name</th>
+                            <th>Duration</th>
+                            <th>Difficulty</th>
+                            <th>Group Size</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Wild Rapids Adventure</td>
+                            <td>2 Days</td>
+                            <td>Class IV</td>
+                            <td>6-8 People</td>
+                            <td>shs. 75,000</td>
+                        </tr>
+                        <tr>
+                            <td>Family Float Trip</td>
+                            <td>1 Day</td>
+                            <td>Class I-II</td>
+                            <td>4-10 People</td>
+                            <td>shs. 35,000</td>
+                        </tr>
+                        <tr>
+                            <td>Wilderness Expedition</td>
+                            <td>5 Days</td>
+                            <td>Class III-IV</td>
+                            <td>4-6 People</td>
+                            <td>shs. 230,000</td>
+                        </tr>
+                        <tr>
+                            <td>Beginner's Journey</td>
+                            <td>Half Day</td>
+                            <td>Class I-II</td>
+                            <td>6-12 People</td>
+                            <td>shs. 59,000</td>
+                        </tr>
+                        <tr>
+                            <td>Extreme Challenge</td>
+                            <td>3 Days</td>
+                            <td>Class V</td>
+                            <td>4-6 People</td>
+                            <td>shs. 129,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Whitewater Rafting Adventures | Namayanja Swabulah |
+            <a href="images/trips-wireframe.jpg" target="_blank">View Trips Page Wireframe</a>
+        </p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com"><img src="images/facebook.svg" alt="Facebook"></a>
+            <a href="https://twitter.com"><img src="images/twitter.svg" alt="Twitter"></a>
+            <a href="https://instagram.com"><img src="images/instagram.svg" alt="Instagram"></a>
+        </nav>
+    </footer>
+</body>
+
+</html>
